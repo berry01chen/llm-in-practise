@@ -343,7 +343,7 @@ torchrun --nproc_per_node=2 deepseek-r1-qwen3-0528-8b-qlora.dist.py
 
 ```bash
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0,2 \
-	vllm serve /home/marion/Pretrained_Models/Qwen3-8B/   --enable-lora Qwen3-8B \
+	vllm serve /home/marion/Pretrained_Models/Qwen3-8B/ \
 	--enable-lora --lora-modules mageedu-lora=./finetuned/qwen3-8b-lora/ 
 	--tensor-parallel-size 2 --gpu-memory-utilization 0.85
 ```
@@ -354,7 +354,7 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0,2 \
 
 ```bash
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0,2 \
-	vllm serve /home/marion/Pretrained_Models/Qwen3-8B/   --enable-lora Qwen3-8B \
+	vllm serve /home/marion/Pretrained_Models/Qwen3-8B/ \
 	--enable-lora --lora-modules mageedu-lora=./finetuned/qwen3-8b-lora/ 
 	--chat-template ./templates/chatml_template.jinja
 	--tensor-parallel-size 2 --gpu-memory-utilization 0.85
